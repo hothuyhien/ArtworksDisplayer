@@ -1,0 +1,14 @@
+# ArtGalleryViewer/.gitignore
+
+# Java
+artworks-backend/target/
+*.class
+*.log
+
+# Node (React)
+artworks-frontend/node_modules/
+artworks-frontend/build/
+
+# OS files
+.DS_Store
+Thumbs.db
