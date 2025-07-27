@@ -1,6 +1,8 @@
 package org.selenium.base;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.selenium.pages.DisplayPage;
 import org.testng.annotations.AfterClass;
@@ -14,16 +16,24 @@ public class BaseTest {
 
     @BeforeClass
     public void setUp() {
-        driver = new EdgeDriver();
+        //WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get(url);
         basePage = new BasePage();
         basePage.setDriver(driver);
         displayPage = new DisplayPage();
+        wait(10000);
     }
 
     @AfterClass
     public void tearDown() {
         driver.quit();
+    }
+
+    public void wait(int millis) {
+        try {
+            Thread.sleep(millis);
+        } catch (InterruptedException ignored) {}
     }
 }
