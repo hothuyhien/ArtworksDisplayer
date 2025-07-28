@@ -17,7 +17,7 @@ public class BaseTest {
     @BeforeClass
     public void setUp() {
         //WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        driver = new EdgeDriver();
         driver.manage().window().maximize();
         driver.get(url);
         basePage = new BasePage();
