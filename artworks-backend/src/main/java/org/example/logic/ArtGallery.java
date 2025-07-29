@@ -1,6 +1,5 @@
 package org.example.logic;
 
-
 import org.example.model.Art;
 import org.example.service.ArtService;
 import org.json.JSONException;
@@ -24,7 +23,13 @@ public class ArtGallery {
     }
 
     public Art getCurrentArtwork() throws JSONException, IOException {
-        return artService.getArtworkByIdSkippingInvalid(currentId, 1);
+        // If currentId is 0 (initial state), start from MIN_ID
+        if (currentId == 0) {
+            currentId = MIN_ID;
+        }
+        Art art = artService.getArtworkByIdSkippingInvalid(currentId, 1);
+        this.currentId = artService.lastUsedId; // Update currentId with the actual found ID
+        return art;
     }
 
     public Art getNextArtwork() throws JSONException, IOException {
@@ -37,7 +42,7 @@ public class ArtGallery {
     public Art getPreviousArtwork() throws JSONException, IOException {
         if (currentId > MIN_ID) currentId--;
         Art art = artService.getArtworkByIdSkippingInvalid(currentId, -1);
-        this.currentId = artService.lastUsedId; // 💖 Update it here
+        this.currentId = artService.lastUsedId;
         return art;
     }
 
@@ -45,8 +50,12 @@ public class ArtGallery {
         return currentId;
     }
 
+    public int getMinId() {
+        return MIN_ID;
+    }
+
     public void setCurrentId(int id) {
-        if (id > MIN_ID && id < MAX_ID)
+        if (id >= MIN_ID && id <= MAX_ID)
             this.currentId = id;
     }
 }
