@@ -114,11 +114,11 @@ A full-stack web application that displays artwork from the Art Institute of Chi
 ## 📸 Screenshots
 
 ### Main Interface
-![Artwork Display](screenshot-main.png)
+![Artwork Display](assets/screenshot-main.png)
 *Main artwork display with navigation buttons*
 
 ### Error Handling
-![Error State](screenshot-error.png)
+![Error State](assets/screenshot-error.png)
 *Error handling when backend down*
 
 ## 🐛 Known Issues
