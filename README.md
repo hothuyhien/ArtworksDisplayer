@@ -5,11 +5,10 @@ A full-stack web application that displays artwork from the Art Institute of Chi
 ## 📋 Table of Contents
 - [Features](#features)
 - [Tech Stack](#tech-stack)
-- [Project Structure](#project-structure)
 - [Getting Started](#getting-started)
 - [API Integration](#api-integration)
 - [Testing Strategy](#testing-strategy)
-- [Screenshots](#screenshots)
+- [Screenshots](#screenshots)  
 - [Known Issues](#known-issues)
 - [Future Enhancements](#future-enhancements)
 
