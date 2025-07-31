@@ -145,7 +145,7 @@ This project is for educational purposes only.
 
 **Ho Thuy Hien**  
 📧 hothuyhien2412@gmail.com  
-🔗 [LinkedIn Profile]  
+🔗 [LinkedIn Profile](www.linkedin.com/in/hiền-hồ-85b343175)
 💻 [GitHub Profile](https://github.com/hothuyhien)
 
 ---
